@@ -47,30 +47,32 @@ const experiences: Experience[] = [
 
 const HomeExperience = () => {
   return (
-    <section className="flex flex-col gap-8 max-w-5xl mx-auto py-12">
-      <SectionHeader title="Experience" />
+    <section className="bg-background z-10 relative mb-80">
+      <div className="flex flex-col gap-8 max-w-5xl mx-auto py-12">
+        <SectionHeader title="Experience" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-4 pb-12 last:border-b-0 border-b border-secondary/20"
-          >
-            <div>
-              <h3 className="text-xl font-sans font-semibold text-foreground mb-2">
-                {exp.title}
-              </h3>
-              <p className="text-secondary font-medium text-lg">
-                {exp.company}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-4 pb-12 last:border-b-0 border-b border-secondary/20"
+            >
+              <div>
+                <h3 className="text-xl font-sans font-semibold text-foreground mb-2">
+                  {exp.title}
+                </h3>
+                <p className="text-secondary font-medium text-lg">
+                  {exp.company}
+                </p>
+                <p className="text-secondary text-base mt-1">{exp.period}</p>
+              </div>
+
+              <p className="text-foreground font-medium leading-relaxed">
+                {exp.description}
               </p>
-              <p className="text-secondary text-base mt-1">{exp.period}</p>
             </div>
-
-            <p className="text-foreground font-medium leading-relaxed">
-              {exp.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

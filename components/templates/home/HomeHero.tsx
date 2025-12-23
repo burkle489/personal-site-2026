@@ -2,7 +2,7 @@ import HeroImage from "@/components/molecules/HeroImage"
 
 const HomeHero = () => {
   return (
-    <section className="min-h-screen bg-background flex flex-col gap-20 items-center justify-center font-display relative">
+    <section className="min-h-screen bg-background z-10 flex flex-col gap-20 items-center justify-center font-display relative">
       <div className="gap-[clamp(12px,24px)] flex flex-col items-center justify-center">
         <div className="relative">
           <HeroImage />
