@@ -8,15 +8,18 @@
   --font-display: var(--font-oswald);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-background-secondary: var(--background-secondary);
   --color-accent: var(--accent);
   --nav-height: var(--nav-height);
 }
 
 :root {
   --primary: #71843d;
-  --secondary: #aca68a;
+  --secondary: #a0997d;
+  --tertiary: #a09c86;
   --foreground: #260401;
-  --background: #f2ceae;
+  --background: rgb(242, 206, 174);
   --accent: #ff6d1f;
   --nav-height: 6rem;
 }
