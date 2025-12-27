@@ -47,8 +47,8 @@ const experiences: Experience[] = [
 
 const HomeExperience = () => {
   return (
-    <section className="bg-background z-10 relative mb-80">
-      <div className="flex flex-col gap-8 max-w-5xl mx-auto py-12">
+    <section className="bg-background z-10 relative mb-[clamp(11rem,20rem)]">
+      <div className="flex flex-col gap-8 max-w-5xl mx-auto py-[clamp(32px,48px)]">
         <SectionHeader title="Experience" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">

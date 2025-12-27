@@ -2,7 +2,7 @@ import HeroImage from "@/components/molecules/HeroImage"
 
 const HomeHero = () => {
   return (
-    <section className="min-h-screen bg-background z-10 flex flex-col gap-20 items-center justify-center font-display relative">
+    <section className="min-h-screen bg-background z-10 flex flex-col gap-20 items-center justify-center font-display relative px-4">
       <div className="gap-[clamp(12px,24px)] flex flex-col items-center justify-center">
         <div className="relative">
           <HeroImage />
@@ -21,7 +21,7 @@ const HomeHero = () => {
         </p>
       </div>
       <div>
-        <p className="text-[clamp(16px,24px)] max-w-lg text-center font-sans text-foreground">
+        <p className="text-[clamp(18px,24px)] max-w-lg text-center font-sans text-foreground">
           Hey! I&apos;m Tayler, a product-minded software engineer with a
           passion for building products that provide true value to real people.
         </p>

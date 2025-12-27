@@ -3,7 +3,15 @@
 import { DiamondIcon } from "@phosphor-icons/react"
 import Marquee from "react-fast-marquee"
 
-const topSkills = ["React", "NEXTJS", "TypeScript", "Tailwind", "NODEJS"]
+const topSkills = [
+  "React",
+  "NEXTJS",
+  "TypeScript",
+  "Tailwind",
+  "NODEJS",
+  "PostgreSQL",
+  "AI Automations",
+]
 
 const bottomSkills = [
   "Collaborative",
@@ -11,6 +19,7 @@ const bottomSkills = [
   "Communicative",
   "Adaptable",
   "Autonomous",
+  "Agency",
 ]
 
 const Footer = () => {
@@ -20,10 +29,13 @@ const Footer = () => {
         {[...topSkills, ...topSkills].map((skill, index) => (
           <div
             key={index}
-            className="text-[10rem] leading-[0.95] flex items-center gap-16 font-display font-semibold tracking-tight uppercase mx-8"
+            className="text-[clamp(5rem,10rem)] leading-[0.95] flex items-center gap-[clamp(2rem,4rem)] font-display font-semibold tracking-tight uppercase mx-[clamp(1rem,2rem)]"
           >
             {skill}
-            <DiamondIcon size={64} weight="fill" className="text-primary" />
+            <DiamondIcon
+              weight="fill"
+              className="text-primary size-[clamp(3rem,6rem)]"
+            />
           </div>
         ))}
       </Marquee>
@@ -32,10 +44,13 @@ const Footer = () => {
         {[...bottomSkills, ...bottomSkills].map((skill, index) => (
           <div
             key={index}
-            className="text-[10rem] leading-[0.95] flex items-center gap-16 font-display font-semibold tracking-tight uppercase mx-8"
+            className="text-[clamp(5rem,10rem)] leading-[0.95] flex items-center gap-[clamp(2rem,4rem)] font-display font-semibold tracking-tight uppercase mx-[clamp(1rem,2rem)]"
           >
             {skill}
-            <DiamondIcon size={64} weight="fill" className="text-primary" />
+            <DiamondIcon
+              weight="fill"
+              className="text-primary size-[clamp(3rem,6rem)]"
+            />
           </div>
         ))}
       </Marquee>
