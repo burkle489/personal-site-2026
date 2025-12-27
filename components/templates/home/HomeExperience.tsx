@@ -1,4 +1,5 @@
 import SectionHeader from "@/components/atoms/SectionHeader"
+import clsx from "clsx"
 
 interface Experience {
   title: string
@@ -8,13 +9,13 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  {
-    title: "Lead Product Engineer",
-    company: "Flooencer - B2B Influencer Marketing SaaS",
-    period: "2025 — Present",
-    description:
-      "Led full-stack development as sole engineer, rebuilding no-code application into production-ready platform using Next.js, TypeScript, Supabase, and tRPC. Designed scalable architecture for campaign management, influencer discovery, and analytics features.",
-  },
+  // {
+  //   title: "Lead Product Engineer",
+  //   company: "Flooencer - B2B Influencer Marketing SaaS",
+  //   period: "2025 — Present",
+  //   description:
+  //     "Led full-stack development as sole engineer, rebuilding no-code application into production-ready platform using Next.js, TypeScript, Supabase, and tRPC. Designed scalable architecture for campaign management, influencer discovery, and analytics features.",
+  // },
   {
     title: "Senior Full-Stack Developer",
     company: "Fluid Digital - Gaming & Entertainment",
@@ -55,7 +56,15 @@ const HomeExperience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="flex flex-col gap-4 pb-12 last:border-b-0 border-b border-secondary/20"
+              className={clsx(
+                "flex flex-col gap-4 pb-12 border-b border-secondary/20",
+                {
+                  "border-b-0":
+                    index === experiences.length - 1 ||
+                    (experiences.length % 2 === 0 &&
+                      index === experiences.length - 2),
+                }
+              )}
             >
               <div>
                 <h3 className="text-xl font-sans font-semibold text-foreground mb-2">
